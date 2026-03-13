@@ -5,15 +5,25 @@
 import asyncio
 
 
-async def count():
-    print("One")
+async def f():
     await asyncio.sleep(1)
-    print("Two")
-    await asyncio.sleep(1)
+    return "Hello, World!"
+
+
+async def g():
+    result = await f()
+    return result
+
+# async def count():
+#     print("One")
+#     await asyncio.sleep(1)
+#     print("Two")
+#     await asyncio.sleep(1)
 
 
 async def main():
-    await asyncio.gather(count(), count(), count())
+    # await asyncio.gather(count(), count(), count())
+    await g()
 
 
 if __name__ == '__main__':
