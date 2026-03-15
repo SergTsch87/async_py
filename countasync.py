@@ -5,14 +5,14 @@
 import asyncio
 
 
-async def f():
-    await asyncio.sleep(1)
-    return "Hello, World!"
+# async def f():
+#     await asyncio.sleep(1)
+#     return "Hello, World!"
 
 
-async def g():
-    result = await f()
-    return result
+# async def g():
+#     result = await f()
+#     return result
 
 # async def count():
 #     print("One")
@@ -28,12 +28,12 @@ async def f(x):
 async def g(x):
     yield x  # Okay - this is an async generator
 
-async def m(x):
-    yield from gen(x)  # No - SyntaxError
+# async def m(x):
+#     yield from gen(x)  # No - SyntaxError
 
-def n(x):
-    y = await z(x)  # No - SyntaxError (no `async def` here)
-    return y
+# def n(x):
+#     y = await z(x)  # No - SyntaxError (no `async def` here)
+#     return y
 
 
 async def main():
